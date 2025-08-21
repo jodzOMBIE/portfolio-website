@@ -6,8 +6,8 @@ interface InfoOverlayProps {
     visible: boolean;
 }
 
-const NAME_TEXT = 'Henry Heffernan';
-const TITLE_TEXT = 'Software Engineer';
+const NAME_TEXT = 'URBANMPIRE ÄTHER OFFICE Woanders - Ganzgenauvielstäde 71117 Strehhtstr.  6';
+const TITLE_TEXT = ' Mail 2 J.D. & Co. -> office@urban-mpire.com';
 const MULTIPLIER = 1;
 
 const InfoOverlay: React.FC<InfoOverlayProps> = ({ visible }) => {
