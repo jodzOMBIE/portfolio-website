@@ -20,6 +20,7 @@ export default class World {
     monitorScreen: MonitorScreen;
     coffeeSteam: CoffeeSteam;
     cursor: Cursor;
+    hitboxes: Hitboxes;
     audioManager: AudioManager;
 
     constructor() {
@@ -35,7 +36,7 @@ export default class World {
             this.monitorScreen = new MonitorScreen();
             this.coffeeSteam = new CoffeeSteam();
             this.audioManager = new AudioManager();
-            // const hb = new Hitboxes();
+            this.hitboxes = new Hitboxes();
             // this.cursor = new Cursor();
         });
     }

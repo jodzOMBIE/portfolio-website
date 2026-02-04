@@ -30,6 +30,10 @@ const keys: { [key in CameraKey]: CameraKeyframe } = {
         position: new THREE.Vector3(0, 1800, 5500),
         focalPoint: new THREE.Vector3(0, 500, 0),
     },
+    clipboard: {
+        position: new THREE.Vector3(-1500, 3000, 0),
+        focalPoint: new THREE.Vector3(-1500, 0, 0),
+    },
     loading: {
         position: new THREE.Vector3(-35000, 35000, 35000),
         focalPoint: new THREE.Vector3(0, -5000, 0),
@@ -136,6 +140,15 @@ export class IdleKeyframe extends CameraKeyframeInstance {
 export class OrbitControlsStart extends CameraKeyframeInstance {
     constructor() {
         const keyframe = keys.orbitControlsStart;
+        super(keyframe);
+    }
+
+    update() {}
+}
+
+export class ClipboardKeyframe extends CameraKeyframeInstance {
+    constructor() {
+        const keyframe = keys.clipboard;
         super(keyframe);
     }
 
