@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import Application from '../Application';
-import Camera, { CameraKey } from '../Camera/Camera';
+import Camera from '../Camera/Camera';
 import Mouse from '../Utils/Mouse';
 
 const RENDER_WIREFRAME = true;
@@ -26,7 +26,6 @@ export default class Decor {
 
         this.createRaycaster();
         this.createComputerHitbox();
-        this.createClipboardHitbox();
     }
 
     createRaycaster() {
@@ -43,12 +42,16 @@ export default class Decor {
             console.log(ray);
             const intersects = ray.intersectObjects(this.scene.children);
             console.log(intersects);
-            if (intersects.length > 0) {
-                const hb = this.hitboxes[intersects[0].object.name];
-                if (hb) {
-                    hb.action();
-                }
-            }
+            // this.raycaster.setFromCamera(this.mouse, this.camera.instance);
+            // const intersects = this.raycaster.intersectObjects(
+            //     this.scene.children
+            // );
+            // if (intersects.length > 0) {
+            //     const hb = this.hitboxes[intersects[0].object.name];
+            //     if (hb) {
+            //         hb.action();
+            //     }
+            // }
         });
     }
 
@@ -60,17 +63,6 @@ export default class Decor {
             },
             new THREE.Vector3(0, 650, 0),
             new THREE.Vector3(2000, 2000, 2000)
-        );
-    }
-
-    createClipboardHitbox() {
-        this.createHitbox(
-            'clipboardHitbox',
-            () => {
-                this.camera.transition(CameraKey.CLIPBOARD);
-            },
-            new THREE.Vector3(-1500, 200, 0),
-            new THREE.Vector3(600, 50, 800)
         );
     }
 

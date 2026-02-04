@@ -20,7 +20,6 @@ export default class World {
     monitorScreen: MonitorScreen;
     coffeeSteam: CoffeeSteam;
     cursor: Cursor;
-    hitboxes: Hitboxes; // Manages interactive clickable regions in the 3D scene
     audioManager: AudioManager;
 
     constructor() {
@@ -36,7 +35,7 @@ export default class World {
             this.monitorScreen = new MonitorScreen();
             this.coffeeSteam = new CoffeeSteam();
             this.audioManager = new AudioManager();
-            this.hitboxes = new Hitboxes();
+            // const hb = new Hitboxes();
             // this.cursor = new Cursor();
         });
     }
