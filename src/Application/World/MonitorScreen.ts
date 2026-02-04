@@ -184,7 +184,7 @@ export default class MonitorScreen extends EventEmitter {
 
         // Set iframe attributes
         // PROD
-        iframe.src = 'https://hit-me.media/gridlives/';
+        iframe.src = 'https://hipi-c.com';
         /**
          * Use dev server is query params are present
          *
